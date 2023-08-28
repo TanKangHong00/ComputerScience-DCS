@@ -1,0 +1,27 @@
+.386
+.model flat, stdcall
+.stack 4096
+ExitProcess PROTO, dwExitCode: DWORD
+
+.data
+    ; variable defination
+    char1 DB "a"
+    char2 DB "k"
+    val4 db 2
+
+
+.code
+
+main PROC
+    ; write your assembly code here
+start:
+    mov al, char1
+    mov bl, char2
+    add al, 10
+    sub bl, 10
+
+    jmp start
+
+    INVOKE ExitProcess, 0
+main ENDP
+END main

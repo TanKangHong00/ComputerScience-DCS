@@ -1,0 +1,31 @@
+.386
+.model flat, stdcall
+.stack 4096
+ExitProcess PROTO, dwExitCode: DWORD
+
+.data
+    ; variable defination
+    low_case db "A"
+    up_case db ?
+    val1 db 6
+    val2 db 3
+    val3 db 4
+    result db ?
+
+    strDivident db "Divident : $"
+    strDivisor db "Diisor : $"
+    strQuotient db "Quotient : $"
+    strRemainder db "Remainder : $"
+.code
+
+main PROC
+    ; write your assembly code here
+start:
+    mov al, low_case
+    add al, 32
+    mov up_case, al
+    jmp start
+
+    INVOKE ExitProcess, 0
+main ENDP
+END main
