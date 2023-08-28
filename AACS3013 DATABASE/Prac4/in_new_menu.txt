@@ -1,0 +1,48 @@
+/*
+SQL> desc menu
+ Name                                                              Null?    Type
+ ----------------------------------------------------------------- -------- --------------------------------------------
+ MENU_ID                                                           NOT NULL VARCHAR2(5)
+ DESCR                                                             NOT NULL VARCHAR2(30)
+ PRICE                                                                      NUMBER(6,2)
+ DATE_INTRODUCED                                                            DATE
+ CAT_ID                                                                     VARCHAR2(5)
+ REMARKS                                                                    VARCHAR2(50)
+
+SQL> select*from menu;
+
+MENU_ DESCR                               PRICE DATE_INTRO CAT_I REMARKS
+----- ------------------------------ ---------- ---------- ----- --------------------------------------------------
+M001  Sparkling Lime                        3.9 01/01/2014 DR01  Refreshing soda lime
+M091  Cappuccino                            5.9 01/01/2014 DB01  Made with quality Espresso brew
+M101  Crab stick and Fish Fingers         11.95 24/02/2015 ST01  Delicious finger food
+
+CAT_I DESCRIPTION                     MIN_PRICE  MAX_PRICE
+----- ------------------------------ ---------- ----------
+DR01  Carbonated drinks                       1         10
+DB01  Beverages                               3         15
+ST01  Starters                              4.5         25
+
+*/
+
+-- First, change Oracle's default date format to Malaysian date format
+-- The new date format will be maintained until you terminate the session i.e. logout
+
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD/MM/YYYY'; 
+
+cl scr
+PROMPT 'Data entry for MENU table'
+PROMPT
+PROMPT
+
+ACCEPT v_menuid     CHAR   FORMAT 'A7'         PROMPT 'Enter Menu ID:    '
+ACCEPT v_descr      CHAR   FORMAT 'A30'        PROMPT 'Enter Menu Description:  '
+ACCEPT v_price      NUMBER FORMAT '9999.99'    PROMPT 'Enter Price(RM): '
+ACCEPT v_date       DATE   FORMAT 'DD/MM/YYYY' PROMPT 'Enter introducted data (DD/MM/YYYY): '
+ACCEPT v_catid      CHAR   FORMAT 'A6'         PROMPT 'Enter Category ID: '
+ACCEPT v_remark     CHAR   FORMAT 'A50'        PROMPT 'Enter Remarks: '
+
+--CHAR FORMAT 'A10'
+--execute INSERT statement
+INSERT INTO menu
+VALUES(&v_menuid,'&v_descr','&v_price','&v_date','&v_catid','&v_remark');

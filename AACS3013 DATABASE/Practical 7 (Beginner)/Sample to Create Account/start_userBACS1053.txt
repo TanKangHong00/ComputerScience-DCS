@@ -1,0 +1,6 @@
+@c:\create_userBACS1053.txt  SFG01N01
+@c:\create_userBACS1053.txt  SFG01N02
+@c:\create_userBACS1053.txt  DSG01N01
+@c:\create_userBACS1053.txt  DSG01N02
+@c:\create_userBACS1053.txt  STG01N01
+@c:\create_userBACS1053.txt  STG01N02

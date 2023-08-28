@@ -1,0 +1,4 @@
+
+
+SELECT Order_No, Menu_ID, Quantity, Price, Quantity * Price AS Subtotal
+FROM Order_List;

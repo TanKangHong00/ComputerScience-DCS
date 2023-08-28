@@ -1,0 +1,10 @@
+INSERT INTO Branch VALUES ('DCSY1S1', 'Diploma in Computer Science Year 1 Semester 1');
+INSERT INTO Branch VALUES ('DCSY1S2', 'Diploma in Computer Science Year 1 Semester 2');
+INSERT INTO Branch VALUES ('DCSY1S3', 'Diploma in Computer Science Year 1 Semester 3');
+INSERT INTO Branch VALUES ('DCSY1S4', 'Diploma in Computer Science Year 1 Semester 4');
+INSERT INTO Branch VALUES ('DCSY2S1', 'Diploma in Computer Science Year 2 Semester 1');
+INSERT INTO Branch VALUES ('DCSY2S2', 'Diploma in Computer Science Year 2 Semester 2');
+INSERT INTO Branch VALUES ('DCSY2S3', 'Diploma in Computer Science Year 2 Semester 3');
+INSERT INTO Branch VALUES ('DCSY3S1', 'Diploma in Computer Science Year 3 Semester 1');
+INSERT INTO Branch VALUES ('DCSY3S2', 'Diploma in Computer Science Year 3 Semester 2');
+INSERT INTO Branch VALUES ('DCSY3S3', 'Diploma in Computer Science Year 3 Semester 3');

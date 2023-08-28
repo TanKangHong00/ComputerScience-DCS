@@ -1,0 +1,47 @@
+/*
+Sample from ORACLE Sql*Plus reference:
+ACCEPT pswd CHAR PROMPT 'Password: ' HIDE
+ACCEPT salary NUMBER FORMAT '999.99' DEFAULT '000.0' -
+PROMPT 'Enter weekly salary: '
+ACCEPT hired DATE FORMAT 'dd/mm/yyyy' DEFAULT '01/01/2003'-
+PROMPT 'Enter date hired: '
+ACCEPT lastname CHAR FORMAT 'A20' -
+PROMPT 'Enter employee lastname: '
+*/
+
+-- script to insert a record into the customer table
+/* the customer table structure as a freference
+create table customer (
+   cust_no	number(7)   not null,
+   cust_name	varchar(25) not null,
+   email	varchar(35),
+   phone	varchar(14),
+   birth_date   date,
+   gender	char(1),
+primary key(cust_no),
+constraint chk_email check (REGEXP_LIKE(email,'^[a-zA-Z]\w+@(\S+)$')),
+constraint chk_gender check (UPPER(gender) in ('M','F'))
+);
+
+*/
+
+-- First, change Oracle's default date format to Malaysian date format
+-- The new date format will be maintained until you terminate the session i.e. logout
+
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD/MM/YYYY'; 
+
+cl scr
+PROMPT 'Data entry for FOOD table'
+PROMPT
+PROMPT
+
+ACCEPT v_staffid      char   FORMAT 'A14'        PROMPT 'Enter Staff ID.:      '
+ACCEPT v_tableno     NUMBER FORMAT '999999'    PROMPT 'Enter Table No:    '
+ACCEPT v_foodid      CHAR FORMAT 'A18'    PROMPT 'Enter Food ID:  '
+ACCEPT v_price      NUMBER FORMAT '9999.99'    PROMPT 'Enter Price(RM): '
+ACCEPT v_totalitem      NUMBER   FORMAT '999999'        PROMPT 'Enter Total Item:      '
+ACCEPT v_totalamount     NUMBER   FORMAT '999999'         PROMPT 'Enter Total Amount: '
+
+--execute the INSERT statement
+INSERT INTO food VALUES
+VALUES(&v_staffid,'&v_tableno','&v_foodid','&v_price','&v_totalitem','&v_totalamount');

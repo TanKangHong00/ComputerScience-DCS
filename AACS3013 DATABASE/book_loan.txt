@@ -1,0 +1,10 @@
+CREATE TABLE Book_Loan ( 
+book_loan_id            varchar(9)  NOT NULL, 
+borrowed_date           DATE, 
+returned_date             DATE, 
+date_due_for_return   DATE, 
+student_id                   VARCHAR(10) NOT NULL, 
+PRIMARY KEY(book_loan_id)
+); 
+ 
+

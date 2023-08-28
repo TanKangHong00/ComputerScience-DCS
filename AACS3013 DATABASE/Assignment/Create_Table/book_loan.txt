@@ -1,0 +1,9 @@
+CREATE TABLE Book_Loan (
+book_loan_ID varchar(9) NOT NULL,
+borrowed_date date NOT NULL,
+returned_date date NOT NULL,
+date_due_for_return date NOT NULL,
+student_ID varchar(10) NOT NULL,
+PRIMARY KEY(book_loan_ID),
+FOREIGN KEY(student_ID) references student(student_ID)
+);

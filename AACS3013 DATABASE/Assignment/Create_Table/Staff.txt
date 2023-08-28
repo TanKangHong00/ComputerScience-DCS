@@ -1,0 +1,8 @@
+CREATE TABLE Staff (
+Staff_ID VARCHAR(4) NOT NULL,
+Staff_name VARCHAR(50) NOT NULL,
+Staff_contact VARCHAR(14) NOT NULL,
+Staff_gender CHAR(1) DEFAULT 'M',
+PRIMARY KEY(Staff_ID),
+CONSTRAINT chk_staff_gender check(UPPER(Staff_gender) in ('M','F'))
+);

@@ -1,0 +1,10 @@
+CREATE TABLE Room_booking (
+Room_booking_ID VARCHAR(5) NOT NULL,
+Room_booking_date date NOT NULL,
+Room_use_date date NOT NULL,
+Staff_ID VARCHAR(4) NOT NULL,
+Student_ID VARCHAR(10) NOT NULL,
+PRIMARY KEY(Room_booking_ID),
+FOREIGN KEY(Staff_ID) references Staff(Staff_ID),
+FOREIGN KEY(Student_ID) references Student(Student_ID)
+);

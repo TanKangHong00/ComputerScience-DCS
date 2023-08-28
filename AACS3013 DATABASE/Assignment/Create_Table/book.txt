@@ -1,0 +1,9 @@
+CREATE TABLE Book (
+book_ID varchar(7) NOT NULL,
+book_title varchar(30) NOT NULL,
+book_auther varchar(25) NOT NULL,
+book_cost number(7,2) NOT NULL,
+book_code varchar(20) NOT NULL,
+categories varchar(15) DEFAULT 'All Type',
+primary key(book_ID)
+);

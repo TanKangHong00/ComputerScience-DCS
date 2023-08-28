@@ -1,0 +1,33 @@
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id 
+FROM book_loan B,student S 
+WHERE B.student_id = S.student_id AND book_loan_id <= 'LOID00031' 
+ORDER BY book_loan_id; 
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id 
+FROM book_loan B,student S 
+WHERE B.student_id = S.student_id AND borrowed_date >= '01-JAN-2020'  
+ORDER BY book_loan_id; 
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id 
+FROM book_loan B,student S 
+WHERE B.student_id = S.student_id AND returned_date <= '08-JAN-2021' 
+ORDER BY book_loan_id; 
+
+
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id  
+FROM book_loan B,student S  
+WHERE B.student_id = S.student_id AND book_loan_id = '&v_BOOK_LOAN_ID'  
+ORDER BY book_loan_id; 
+
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id 
+FROM book_loan B,student S 
+WHERE B.student_id = S.student_id AND borrowed_date BETWEEN  '&v_START_BORROWED_DATE'  AND '&v_START_BORROWED_DATE'  
+ORDER BY book_loan_id; 
+
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id 
+FROM book_loan B,student S 
+WHERE B.student_id = S.student_id AND date_due_for_return BETWEEN  '&v_START_DUE_DATE_FOR_RETURN'  AND '&v_END_DUE_DATE_FOR_RETURN'  
+ORDER BY book_loan_id; 

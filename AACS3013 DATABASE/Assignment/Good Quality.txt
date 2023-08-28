@@ -1,0 +1,32 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD/MM/YYYY'; 
+
+cl scr
+PROMPT 'Data entry for BOOK LOAN table'
+PROMPT
+PROMPT
+
+ACCEPT book_loan_id         FORMAT 'A14'        PROMPT 'Enter Book Loan ID:      '
+ACCEPT borrowed_date        FORMAT 'DD/MM/YYYY'    PROMPT 'Enter Date Of Borrow :      '
+ACCEPT returned_date        FORMAT 'DD/MM/YYYY'    PROMPT 'Enter Date Of Return  :    '
+ACCEPT date_due_for_return        FORMAT 'DD/MM/YYYY'    PROMPT 'Enter Date Due Of Return  :   '
+ACCEPT student_id           FORMAT 'A14'        PROMPT 'Enter Student ID:'
+
+--execute the INSERT statement
+INSERT INTO book_loan VALUES
+VALUES('&book_loan_id','&borrowed_date','&returned_date','&date_due_for_return', '&student_id');
+
+TTITLE CENTER 'BOOK LOAN for'_DATE-
+RIGHT'Page:'FORMAT 999 SQL.PNO SKIP 2
+
+BREAK ON book_loan_id ON borrowed_date ON returned_date SKIP 1 ON date_due_for_return
+COMPUTE SUM label 'Total:' OF Sub_Total ON Order_No
+
+SELECT book_loan_id,borrowed_date,returned_date,date_due_for_return,student_id
+FROM book_loan;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

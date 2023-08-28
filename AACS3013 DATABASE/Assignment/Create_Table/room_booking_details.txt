@@ -1,0 +1,9 @@
+CREATE TABLE Room_booking_details (
+Room_booking_ID VARCHAR(5) NOT NULL,
+Room_ID VARCHAR(8) NOT NULL,
+Start_time CHAR(5),
+End_time CHAR(5),
+PRIMARY KEY(Room_booking_ID, Room_ID),
+FOREIGN KEY(Room_booking_ID) references Room_booking(Room_booking_ID),
+FOREIGN KEY(Room_ID) references Room(Room_ID)
+);

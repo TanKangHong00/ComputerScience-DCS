@@ -1,0 +1,853 @@
+ 
+
+5.3 Room booking (10 records) 
+
+BASE TABLE 
+
+INSERT INTO Room_booking VALUES('ROOM000'); 
+
+INSERT INTO Room_booking VALUES('ROOM001'); 
+
+INSERT INTO Room_booking VALUES('ROOM002'); 
+
+INSERT INTO Room_booking VALUES('ROOM003'); 
+
+INSERT INTO Room_booking VALUES('ROOM004'); 
+
+INSERT INTO Room_booking VALUES('ROOM005'); 
+
+INSERT INTO Room_booking VALUES('ROOM006'); 
+
+INSERT INTO Room_booking VALUES('ROOM007'); 
+
+INSERT INTO Room_booking VALUES('ROOM008'); 
+
+INSERT INTO Room_booking VALUES('ROOM009'); 
+
+ 
+
+5.4 Room booking details (100 records) 
+
+Fk: Room ID, Student ID 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02493', '08-Feb-2021'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02577', '13-Aug-2018'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02276', '05-Feb-2020'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02556', '18-Apr-2018'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02150', '08-Apr-2020'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02269', '13-Aug-2020'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02475', '28-Jun-2020'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02178', '12-May-2018'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02326', '03-Jan-2021'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02447', '29-Jul-2019'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02953', '28-Aug-2019'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02760', '16-Jan-2020'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02804', '01-Sep-2018'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02177', '28-Nov-2018'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02120', '21-Jan-2019'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02785', '01-Aug-2020'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02963', '13-Oct-2020'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02419', '14-Jan-2019'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02984', '07-Apr-2019'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02665', '09-Jun-2018'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02063', '09-Nov-2020'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02634', '17-Mar-2019'); 
+
+insert into Room_booking_details values ('ROOM007', '20WMD02526', '20-Jan-2018'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02490', '01-Mar-2019'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02129', '31-Jul-2019'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02766', '10-May-2019'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02449', '21-Jan-2020'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02188', '21-Dec-2020'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02230', '18-Sep-2018'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02594', '26-Mar-2020'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02935', '15-Jul-2020'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02282', '11-Sep-2018'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02761', '30-Jul-2020'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02709', '14-Oct-2020'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02051', '18-Dec-2020'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02280', '24-Mar-2020'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02824', '22-Jan-2019'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02764', '21-Jun-2018'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02086', '29-May-2020'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02899', '08-Apr-2018'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02760', '06-Dec-2020'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02996', '11-Feb-2021'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02119', '06-Nov-2019'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02350', '06-Apr-2018'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02594', '05-Jun-2018'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02713', '10-Sep-2019'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02631', '29-May-2018'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02245', '04-Jul-2018'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02494', '07-Oct-2018'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02130', '16-Jul-2018'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02093', '20-Sep-2018'); 
+
+insert into Room_booking_details values ('ROOM007', '20WMD02430', '06-Jan-2018'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02401', '22-Nov-2020'); 
+
+insert into Room_booking_details values ('ROOM007', '20WMD02727', '15-Apr-2019'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02731', '13-Sep-2018'); 
+
+insert into Room_booking_details values ('ROOM007', '20WMD02510', '07-Oct-2020'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02987', '04-Feb-2018'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02422', '13-Dec-2020'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02615', '19-Jul-2020'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02216', '28-Jul-2020'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02139', '11-Jan-2019'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02309', '01-Oct-2020'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02878', '31-Dec-2020'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02220', '05-Jan-2018'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02587', '07-Feb-2020'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02757', '20-Feb-2021'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02650', '16-Nov-2018'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02814', '29-Dec-2019'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02745', '27-Jan-2020'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02903', '17-Jun-2018'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02496', '14-Feb-2021'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02323', '02-Sep-2019'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02524', '10-May-2018'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02478', '17-Jul-2020'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02124', '29-Mar-2020'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02916', '10-Sep-2019'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02011', '01-Feb-2018'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02140', '09-Feb-2020'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02369', '31-Mar-2020'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02676', '10-Apr-2020'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02199', '28-Jan-2019'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02267', '14-May-2020'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02915', '30-Jan-2018'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02942', '11-May-2020'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02913', '09-Apr-2018'); 
+
+insert into Room_booking_details values ('ROOM007', '20WMD02211', '02-Apr-2018'); 
+
+insert into Room_booking_details values ('ROOM007', '20WMD02531', '20-Apr-2019'); 
+
+insert into Room_booking_details values ('ROOM000', '20WMD02211', '17-Dec-2018'); 
+
+insert into Room_booking_details values ('ROOM003', '20WMD02781', '01-Nov-2018'); 
+
+insert into Room_booking_details values ('ROOM002', '20WMD02491', '03-Feb-2019'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02873', '31-Jul-2018'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02338', '20-Oct-2019'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02105', '17-Jul-2019'); 
+
+insert into Room_booking_details values ('ROOM001', '20WMD02054', '05-Dec-2020'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02672', '20-Nov-2019'); 
+
+insert into Room_booking_details values ('ROOM004', '20WMD02251', '24-Jun-2019'); 
+
+insert into Room_booking_details values ('ROOM009', '20WMD02389', '11-Feb-2020'); 
+
+insert into Room_booking_details values ('ROOM006', '20WMD02231', '18-Feb-2018'); 
+
+insert into Room_booking_details values ('ROOM005', '20WMD02845', '10-Nov-2020'); 
+
+insert into Room_booking_details values ('ROOM008', '20WMD02825', '06-Feb-2020'); 
+
+ 
+
+5.5 Book Loan (100 records) 
+
+Fk: Student ID 
+
+INSERT INTO book_loan values('LOID00001','01-JAN-2021','08-JAN-2021','15-JAN-2021', '20WMD02001');   
+
+INSERT INTO book_loan values('LOID00002','01-JAN-2021','09-JAN-2021','15-JAN-2021', '20WMD02002');  
+
+INSERT INTO book_loan values('LOID00003','01-JAN-2021','10-JAN-2021','15-JAN-2021', '20WMD02003');  
+
+INSERT INTO book_loan values('LOID00004','02-FEB-2021','09-FEB-2021','15-FEB-2021', '20WMD02004');  
+
+INSERT INTO book_loan values('LOID00005','02-FEB-2021','10-FEB-2021','15-FEB-2021', '20WMD02005');  
+
+INSERT INTO book_loan values('LOID00006','02-FEB-2021','11-FEB-2021','15-FEB-2021', '20WMD02006');  
+
+INSERT INTO book_loan values('LOID00007','04-APR-2021','11-APR-2021','18-APR-2021', '20WMD02007');  
+
+INSERT INTO book_loan values('LOID00008','04-APR-2021','12-APR-2021','18-APR-2021', '20WMD02008');  
+
+INSERT INTO book_loan values('LOID00009','05-MAY-2021','12-MAY-2021','19-MAY-2021', '20WMD02009');  
+
+INSERT INTO book_loan values('LOID00010','05-MAY-2021','13-MAY-2021','19-MAY-2021', '20WMD02010');  
+
+INSERT INTO book_loan VALUES('LOID00011','01-MAY-2021','08-MAY-2020','15-MAY-2021', '20WMD39489' ); 
+
+INSERT INTO book_loan VALUES('LOID00012','25-JUN-2020','02-JUL-2020','09-JUL-2020', '20WMD24399'); 
+
+INSERT INTO book_loan VALUES('LOID00013','01-MAY-2020','10-MAY-2020','15-MAY-2020', '20WMD32724'); 
+
+INSERT INTO book_loan VALUES('LOID00014','19-MAR-2019','27-MAR-2019','02-APR-2019', '20WMD54587'); 
+
+INSERT INTO book_loan VALUES('LOID00015','14-MAR-2019','31-MAR-2019','03-APR-2019', '20WMD03047'); 
+
+INSERT INTO book_loan VALUES('LOID00015','05-FEB-2021','13-FEB-2021','19-FEB-2021', '20WMD13969'); 
+
+INSERT INTO book_loan VALUES('LOID00017','14-APR-2020','23-APR-2020','28-APR-2020', '20WMD57970'); 
+
+INSERT INTO book_loan VALUES('LOID00018','27-NOV-2019','03-DEC-2019','11-DEC-2019', '20WMD36304'); 
+
+INSERT INTO book_loan VALUES('LOID00019','06-SEP-2018','13-SEP-2018','20-SEP-2018', '20WMD15926'); 
+
+INSERT INTO book_loan VALUES('LOID00020','20-MAY-2018','28-MAY-2018','03-APR-2018', '20WMD51488'); 
+
+INSERT INTO book_loan VALUES('LOID00021','15-APR-2019','22-APR-2019','29-APR-2019', '20WMD67422'); 
+
+INSERT INTO book_loan VALUES('LOID00022','25-OCT-2019','01-NOV-2019','09-NOV-2019', '20WMD80915'); 
+
+INSERT INTO book_loan VALUES('LOID00023','02-AUG-2019','09-AUG-2019','16-AUG-2019', '20WMD62570'); 
+
+INSERT INTO book_loan VALUES('LOID00024','16-OCT-2020','23-OCT-2020','30-OCT-2020', '20WMD44815'); 
+
+INSERT INTO book_loan VALUES('LOID00025','07-JUN-2019','14-JUN-2019','21-JUN-2019', '20WMD07980'); 
+
+INSERT INTO book_loan VALUES('LOID00026','22-DEC-2020','29-DEC-2020','05-JAN-2021', '20WMD01496'); 
+
+INSERT INTO book_loan VALUES('LOID00027','04-OCT-2019','11-OCT-2019','18-OCT-2019', '20WMD82727'); 
+
+INSERT INTO book_loan VALUES('LOID00028','04-MAR-2020','13-MAR-2020','18-MAR-2020', '20WMD96294'); 
+
+INSERT INTO book_loan VALUES('LOID00029','15-JUL-2020','24-JUL-2020','29-JUL-2020', '20WMD71593'); 
+
+INSERT INTO book_loan VALUES('LOID00030','09-DEC-2019','17-DEC-2019','23-DEC-2019', '20WMD88726'); 
+
+INSERT INTO book_loan VALUES('LOID00031','19-APR-2020','29-APR-2020','03-MAY-2020', '20WMD93974'); 
+
+INSERT INTO book_loan VALUES('LOID00032','02-JUL-2019','09-JUL-2019','16-JUL-2019', '20WMD83762'); 
+
+INSERT INTO book_loan VALUES('LOID00033','30-SEP-2020','10-OCT-2020','14-OCT-2020', '20WMD72391'); 
+
+INSERT INTO book_loan VALUES('LOID00034','02-MAY-2020','10-MAY-2020','16-MAY-2020', '20WMD03982'); 
+
+INSERT INTO book_loan VALUES('LOID00035','15-APR-2019','22-APR-2019','29-APR-2019', '20WMD30215'); 
+
+INSERT INTO book_loan VALUES('LOID00036','15-JUN-2019','22-JUN-2019','29-JUN-2019', '20WMD87171'); 
+
+INSERT INTO book_loan VALUES('LOID00037','15-JAN-2021','22-JAN-2021','29-JAN-2021', '20WMD23341'); 
+
+INSERT INTO book_loan VALUES('LOID00038','07-SEP-2019','15-SEP-2019','21-SEP-2019', '20WMD04741'); 
+
+INSERT INTO book_loan VALUES('LOID00039','02-JAN-2021','21-JAN-2021','26-JAN-2021', '20WMD70945'); 
+
+INSERT INTO book_loan VALUES('LOID00040','07-NOV-2020','14-NOV-2020','21-NOV-2020', '20WMD90975'); 
+
+INSERT INTO book_loan VALUES('LOID00041','11-JUL-2020','20-JUL-2020','25-JUL-2020', '20WMD73013'); 
+
+INSERT INTO book_loan VALUES('LOID00042','12-NOV-2019','20-NOV-2019','26-NOV-2019', '20WMD33244'); 
+
+INSERT INTO book_loan VALUES('LOID00043','27-FEB-2020','05-MAR-2020','12-MAR-2020', '20WMD81656'); 
+
+INSERT INTO book_loan VALUES('LOID00044','30-JAN-2021','06-FEB-2021','12-FEB-2021', '20WMD34897'); 
+
+INSERT INTO book_loan VALUES('LOID00045','01-MAR-2019','08-MAR-2019','15-MAR-2019', '20WMD15390'); 
+
+INSERT INTO book_loan VALUES('LOID00046','22-OCT-2020','01-NOV-2020','05-NOV-2020', '20WMD66585'); 
+
+INSERT INTO book_loan VALUES('LOID00047','17-AUG-2019','25-AUG-2019','31-AUG-2019', '20WMD63725'); 
+
+INSERT INTO book_loan VALUES('LOID00048','29-OCT-2020','15-NOV-2020','17-NOV-2020', '20WMD82577'); 
+
+INSERT INTO book_loan VALUES('LOID00049','02-JAN-2019','09-JAN-2019','16-JAN-2019', '20WMD10269'); 
+
+INSERT INTO book_loan VALUES('LOID00050','05-SEP-2020','12-SEP-2020','19-SEP-2020', '20WMD52221'); 
+
+INSERT INTO book_loan VALUES('LOID00051','11-OCT-2019','19-OCT-2019','25-OCT-2019', '20WMD01367'); 
+
+INSERT INTO book_loan VALUES('LOID00052','30-JUN-2019','07-JUL-2019','14-JUL-2019', '20WMD35369'); 
+
+INSERT INTO book_loan VALUES('LOID00053','27-JAN-2020','08-FEB-2020','10-FEB-2020', '20WMD98556'); 
+
+INSERT INTO book_loan VALUES('LOID00054','26-JUN-2020','10-JUL-2020','15-JUL-2020', '20WMD50494'); 
+
+INSERT INTO book_loan VALUES('LOID00055','24-APR-2019','02-MAY-2019','08-MAY-2019', '20WMD75562'); 
+
+INSERT INTO book_loan VALUES('LOID00056','09-AUG-2020','16-AUG-2020','23-AUG-2020', '20WMD87369'); 
+
+INSERT INTO book_loan VALUES('LOID00057','22-MAR-2018','30-MAR-2018','05-APR-2018', '20WMD81164'); 
+
+INSERT INTO book_loan VALUES('LOID00058','15-SEP-2018','23-SEP-2018','29-SEP-2018', '20WMD70545'); 
+
+INSERT INTO book_loan VALUES('LOID00059','10-MAR-2019','20-MAR-2019','24-MAR-2019', '20WMD91855'); 
+
+INSERT INTO book_loan VALUES('LOID00060','18-MAY-2020','29-MAY-2020','01-JUN-2020', '20WMD22311'); 
+
+INSERT INTO book_loan VALUES('LOID00061','25-MAY-2020','01-JUN-2020','08-JUN-2020', '20WMD55989'); 
+
+INSERT INTO book_loan VALUES('LOID00062','08-MAY-2018','20-MAY-2018','22-MAY-2018', '20WMD48709'); 
+
+INSERT INTO book_loan VALUES('LOID00063','17-MAR-2018','25-MAR-2018','31-MAR-2018', '20WMD12622'); 
+
+INSERT INTO book_loan VALUES('LOID00064','15-OCT-2018','22-OCT-2018','29-OCT-2018', '20WMD77659'); 
+
+INSERT INTO book_loan VALUES('LOID00065','26-NOV-2018','10-DEC-2018','15-DEC-2018', '20WMD45329'); 
+
+INSERT INTO book_loan VALUES('LOID00066','12-OCT-2020','19-OCT-2020','26-OCT-2020', '20WMD13657'); 
+
+INSERT INTO book_loan VALUES('LOID00067','30-OCT-2019','10-NOV-2019','13-NOV-2019', '20WMD01539'); 
+
+INSERT INTO book_loan VALUES('LOID00068','12-DEC-2018','19-DEC-2018','26-DEC-2018', '20WMD45363'); 
+
+INSERT INTO book_loan VALUES('LOID00069','13-MAY-2020','20-MAY-2020','27-MAY-2020', '20WMD01830'); 
+
+INSERT INTO book_loan VALUES('LOID00070','16-SEP-2020','23-SEP-2020','30-SEP-2020', '20WMD34840'); 
+
+INSERT INTO book_loan VALUES('LOID00071','21-AUG-2018','30-AUG-2018','04-SEP-2018', '20WMD77532'); 
+
+INSERT INTO book_loan VALUES('LOID00072','22-JAN-2019','29-JAN-2019','05-FEB-2019', '20WMD22592'); 
+
+INSERT INTO book_loan VALUES('LOID00073','19-APR-2019','26-APR-2019','03-MAY-2019', '20WMD26957'); 
+
+INSERT INTO book_loan VALUES('LOID00074','28-DEC-2019','06-JAN-2020','11-JAN-2020', '20WMD93610'); 
+
+INSERT INTO book_loan VALUES('LOID00075','20-FEB-2019','27-FEB-2019','04-MAR-2019', '20WMD76433'); 
+
+INSERT INTO book_loan VALUES('LOID00076','13-MAY-2018','20-MAY-2018','27-MAY-2018', '20WMD21711'); 
+
+INSERT INTO book_loan VALUES('LOID00077','31-OCT-2019','07-NOV-2019','14-NOV-2019', '20WMD50937'); 
+
+INSERT INTO book_loan VALUES('LOID00078','08-AUG-2020','15-AUG-2020','22-AUG-2020', '20WMD12067'); 
+
+INSERT INTO book_loan VALUES('LOID00079','31-MAR-2018','10-APR-2018','14-APR-2018', '20WMD20755'); 
+
+INSERT INTO book_loan VALUES('LOID00080','05-SEP-2019','13-SEP-2019','19-SEP-2019', '20WMD90490'); 
+
+INSERT INTO book_loan VALUES('LOID00081','14-JUL-2019','24-JUL-2019','28-JUL-2019', '20WMD84910'); 
+
+INSERT INTO book_loan VALUES('LOID00082','14-NOV-2018','21-NOV-2018','28-NOV-2018', '20WMD61438'); 
+
+INSERT INTO book_loan VALUES('LOID00083','22-MAR-2019','29-MAR-2019','05-MAR-2019', '20WMD74247'); 
+
+INSERT INTO book_loan VALUES('LOID00084','01-FEB-2018','20-FEB-2018','21-FEB-2018', '20WMD87610'); 
+
+INSERT INTO book_loan VALUES('LOID00085','23-APR-2019','02-MAY-2019','07-MAY-2019', '20WMD99961'); 
+
+INSERT INTO book_loan VALUES('LOID00086','05-OCT-2018','20-OCT-2018','20-OCT-2018', '20WMD21289'); 
+
+INSERT INTO book_loan VALUES('LOID00087','23-NOV-2019','01-DEC-2019','07-DEC-2019', '20WMD98200'); 
+
+INSERT INTO book_loan VALUES('LOID00088','25-AUG-2019','05-SEP-2019','08-SEP-2019', '20WMD46442'); 
+
+INSERT INTO book_loan VALUES('LOID00089','23-AUG-2019','30-AUG-2019','06-SEP-2019', '20WMD83134'); 
+
+INSERT INTO book_loan VALUES('LOID00090','03-AUG-2019','10-AUG-2019','17-AUG-2019', '20WMD90007'); 
+
+INSERT INTO book_loan VALUES('LOID00091','25-OCT-2018','02-NOV-2018','08-NOV-2018', '20WMD07032'); 
+
+INSERT INTO book_loan VALUES('LOID00092','23-JAN-2019','31-JAN-2019','06-FEB-2019', '20WMD26646'); 
+
+INSERT INTO book_loan VALUES('LOID00093','08-SEP-2018','18-SEP-2018','22-SEP-2018', '20WMD45894'); 
+
+INSERT INTO book_loan VALUES('LOID00094','24-FEB-2018','03-MAR-2018','10-MAR-2018', '20WMD65341'); 
+
+INSERT INTO book_loan VALUES('LOID00095','10-FEB-2019','18-FEB-2019','24-FEB-2019', '20WMD52361'); 
+
+INSERT INTO book_loan VALUES('LOID00096','16-AUG-2019','23-AUG-2019','30-AUG-2019', '20WMD00434'); 
+
+INSERT INTO book_loan VALUES('LOID00097','08-MAY-2018','15-MAY-2018','22-MAY-2018', '20WMD40139'); 
+
+INSERT INTO book_loan VALUES('LOID00098','05-APR-2019','12-APR-2019','19-APR-2019', '20WMD84178'); 
+
+INSERT INTO book_loan VALUES('LOID00099','14-SEP-2018','23-SEP-2018','18-SEP-2018', '20WMD94789'); 
+
+INSERT INTO book_loan VALUES('LOID00100','04-SEP-2020','11-SEP-2020','18-SEP-2020', '20WMD80465'); 
+
+ 
+
+5.6 Book Loan Details (100 records) 
+
+Fk: Book loan ID, Book ID 
+
+INSERT INTO book_loan_details VALUES('LOID00001', '20WMD02001', '01-JAN-2021', '08-JAN-2021', '0.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00002', '20WMD02002', '01-JAN-2021', '09-JAN-2021', '0.10', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00003', '20WMD02003', '01-JAN-2021', '10-JAN-2021', '0.20', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00004', '20WMD02004', '02-FEB-2021', '09-FEB-2021', '0.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00005', '20WMD02005', '02-FEB-2021', '10-FEB-2021', '0.10', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00006', '19WMD02006', '02-FEB-2021', '11-FEB-2021', '0.20', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00007', '19WMD02007', '04-APR-2021', '11-APR-2021', '0.00', 'AAA0005'); 
+
+INSERT INTO book_loan_details VALUES('LOID00008', '19WMD02008', '04-APR-2021', '12-APR-2021', '0.10', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00009', '19WMD02009', '05-MAY-2021', '12-MAY-2021', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00010', '19WMD02010', '05-MAY-2021', '13-MAY-2021', '0.10', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00020', '20WMD51488', '20-MAY-2018', '28-MAY-2018', '0.10', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00021', '20WMD67422', '15-APR-2019', '22-APR-2019', '0.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00022', '20WMD80915', '25-OCT-2019', '01-NOV-2019', '0.00', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00023', '20WMD62570', '02-AUG-2019', '09-AUG-2019', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00024', '20WMD44815', '16-OCT-2020', '23-OCT-2020', '0.00', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00025', '20WMD07980', '07-JUN-2019', '14-JUN-2019', '0.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00026', '20WMD01496', '22-DEC-2020', '29-DEC-2020', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00027', '20WMD82727', '04-OCT-2019', '11-OCT-2019', '0.00', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00028', '20WMD96294', '04-MAR-2020', '13-MAR-2020', '0.20', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00029', '20WMD71593', '15-JUL-2020', '24-JUL-2020', '0.20', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00030', '20WMD88726', '09-DEC-2019', '17-DEC-2019', '0.10', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00031', '20WMD93974', '19-APR-2020', '29-APR-2020', '0.30', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00032', '20WMD83762', '02-JUL-2019', '09-JUL-2019', '0.00', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00033', '20WMD72391', '30-SEP-2020', '10-OCT-2020', '0.30', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00034', '20WMD03982', '02-MAY-2020', '10-MAY-2020', '0.10', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00035', '20WMD30215', '15-APR-2019', '22-APR-2019', '0.00', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00036', '20WMD87171', '15-JUN-2019', '22-JUN-2019', '0.00', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00037', '20WMD23341', '15-JAN-2021', '22-JAN-2021', '0.00', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00038', '20WMD04741', '07-SEP-2019', '15-SEP-2019', '0.10', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00039', '20WMD70945', '02-JAN-2021', '21-JAN-2021', '1.20', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00040', '20WMD90975', '07-NOV-2020', '14-NOV-2020', '0.00', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00041', '20WMD73013', '11-JUL-2020', '20-JUL-2020', '0.20', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00042', '20WMD33244', '12-NOV-2019', '20-NOV-2019', '0.10', 'AAA0005'); 
+
+INSERT INTO book_loan_details VALUES('LOID00043', '20WMD81656', '27-FEB-2020', '05-MAR-2020', '0.00', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00044', '20WMD34897', '30-JAN-2021', '06-FEB-2021', '0.00', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00045', '20WMD15390', '01-MAR-2019', '08-MAR-2019', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00046', '20WMD66585', '22-OCT-2020', '01-NOV-2020', '0.20', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00047', '20WMD63725', '17-AUG-2019', '25-AUG-2019', '0.10', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00048', '20WMD82577', '29-OCT-2020', '15-NOV-2020', '1.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00049', '20WMD10269', '02-JAN-2019', '09-JAN-2019', '0.00', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00050', '20WMD52221', '05-SEP-2020', '12-SEP-2020', '0.00', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00051', '20WMD01367', '11-OCT-2019', '19-OCT-2019', '0.10', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00052', '20WMD35369', '30-JUN-2019', '07-JUL-2019', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00053', '20WMD98556', '27-JAN-2020', '08-FEB-2020', '0.50', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00054', '20WMD50494', '26-JUN-2020', '10-JUL-2020', '0.70', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00055', '20WMD75562', '24-APR-2019', '02-MAY-2019', '0.20', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00056', '20WMD87369', '09-AUG-2020', '16-AUG-2020', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00057', '20WMD81164', '22-MAR-2018', '30-MAR-2018', '0.10', 'AAA0007'); 
+
+INSERT INTO book_loan_details VALUES('LOID00058', '20WMD70545', '15-SEP-2018', '23-SEP-2018', '0.20', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00059', '20WMD91855', '10-MAR-2019', '20-MAR-2019', '0.30', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00060', '20WMD22311', '18-MAY-2020', '29-MAY-2020', '0.40', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00061', '20WMD55989', '25-MAY-2020', '01-JUN-2020', '0.00', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00062', '20WMD48709', '08-MAY-2018', '20-MAY-2018', '0.50', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00063', '20WMD12622', '17-MAR-2018', '25-MAR-2018', '0.10', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00064', '20WMD77659', '15-OCT-2018', '22-OCT-2018', '0.00', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00065', '20WMD45329', '26-NOV-2018', '10-DEC-2018', '0.60', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00066', '20WMD13657', '12-OCT-2020', '19-OCT-2020', '0.10', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00067', '20WMD01539', '30-OCT-2019', '10-NOV-2019', '0.40', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00068', '20WMD45363', '12-DEC-2018', '19-DEC-2018', '0.00', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00069', '20WMD01830', '13-MAY-2020', '20-MAY-2020', '0.00', 'AAA0005'); 
+
+INSERT INTO book_loan_details VALUES('LOID00070', '20WMD34840', '16-SEP-2020', '23-SEP-2020', '0.00', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00071', '20WMD77532', '21-AUG-2018', '30-AUG-2018', '0.20', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00072', '20WMD22592', '22-JAN-2019', '29-JAN-2019', '0.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00073', '20WMD26957', '19-APR-2019', '26-APR-2019', '0.00', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00074', '20WMD93610', '28-DEC-2019', '06-JAN-2020', '0.20', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00075', '20WMD76433', '20-FEB-2019', '27-FEB-2019', '0.00', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00076', '20WMD21711', '13-MAY-2018', '20-MAY-2018', '0.00', 'AAA0005'); 
+
+INSERT INTO book_loan_details VALUES('LOID00077', '20WMD50937', '31-OCT-2019', '07-NOV-2019', '0.00', 'AAA0007'); 
+
+INSERT INTO book_loan_details VALUES('LOID00078', '20WMD12067', '08-AUG-2020', '15-AUG-2020', '0.00', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00079', '20WMD20755', '31-MAR-2018', '10-APR-2018', '0.30', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00080', '20WMD90490', '05-SEP-2019', '13-SEP-2019', '0.10', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00081', '20WMD84910', '14-JUL-2019', '24-JUL-2019', '0.30', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00082', '20WMD61438', '14-NOV-2018', '21-NOV-2018', '0.00', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00083', '20WMD74247', '22-MAR-2019', '29-MAR-2019', '0.00', 'AAA0007'); 
+
+INSERT INTO book_loan_details VALUES('LOID00084', '20WMD87610', '01-FEB-2018', '20-FEB-2018', '1.20', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00085', '20WMD99961', '23-APR-2019', '02-MAY-2019', '0.20', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00086', '20WMD21289', '05-OCT-2018', '20-OCT-2018', '0.80', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00087', '20WMD98200', '23-NOV-2019', '01-DEC-2019', '0.10', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00088', '20WMD46442', '25-AUG-2019', '05-SEP-2019', '0.40', 'AAA0010'); 
+
+INSERT INTO book_loan_details VALUES('LOID00089', '20WMD83134', '23-AUG-2019', '30-AUG-2019', '0.00', 'AAA0005'); 
+
+INSERT INTO book_loan_details VALUES('LOID00090', '20WMD90007', '03-AUG-2019', '10-AUG-2019', '0.00', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00091', '20WMD07032', '25-OCT-2018', '02-NOV-2018', '0.10', 'AAA0006'); 
+
+INSERT INTO book_loan_details VALUES('LOID00092', '20WMD26646', '23-JAN-2019', '31-JAN-2019', '0.10', 'AAA0007'); 
+
+INSERT INTO book_loan_details VALUES('LOID00093', '20WMD45894', '08-SEP-2018', '18-SEP-2018', '0.30', 'AAA0009'); 
+
+INSERT INTO book_loan_details VALUES('LOID00094', '20WMD65341', '24-FEB-2018', '03-MAR-2018', '0.00', 'AAA0001'); 
+
+INSERT INTO book_loan_details VALUES('LOID00095', '20WMD52361', '10-FEB-2019', '18-FEB-2019', '0.10', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00096', '20WMD00434', '16-AUG-2019', '23-AUG-2019', '0.00', 'AAA0004'); 
+
+INSERT INTO book_loan_details VALUES('LOID00097', '20WMD40139', '08-MAY-2018', '15-MAY-2018', '0.00', 'AAA0002'); 
+
+INSERT INTO book_loan_details VALUES('LOID00098', '20WMD84178', '05-APR-2019', '12-APR-2019', '0.00', 'AAA0003'); 
+
+INSERT INTO book_loan_details VALUES('LOID00099', '20WMD94789', '14-SEP-2018', '23-SEP-2018', '0.20', 'AAA0008'); 
+
+INSERT INTO book_loan_details VALUES('LOID00100', '20WMD80465', '04-SEP-2020', '11-SEP-2020', '0.00', 'AAA0010'); 
+
+ 
+
+5.7 Book Details (10 records - 少一个record) 
+
+Fk: Category ID 
+
+INSERT INTO book VALUES('AAA0001','Pride and Prejudice','Gram Gwatkins', 21.1, '434492654-4','P001');	 
+
+INSERT INTO book VALUES('AAA0002','To Kill a Mockingbird','Amalia Girdlestone', 23.09, '520310587-1','T001'); 
+
+INSERT INTO book VALUES('AAA0003','1984','Helge Baxandall', 48.74, '941239670-8','A001'); 
+
+INSERT INTO book VALUES('AAA0004','Harry Potter and the Sorcerer's Stone','Ingamar Ebbers', 72.53, '007120577-2','H001');	 
+
+INSERT INTO book VALUES('AAA0005','The Hobbit, or There and Back Again','Ciro Robens', 89.14, '598103545-5','T002');	 
+
+INSERT INTO book VALUES('AAA0006','The Lord of the Rings','Robbie Birtle', 53.34, '294341323-2','T003');	 
+
+INSERT INTO book VALUES('AAA0007','Wutheing Heights','Joyann Plowright', 33.24, '452161941-X','W001'); 
+
+INSERT INTO book VALUES('AAA0008','Jane Eyre','Massimiliano Slarke', 20.72, '919194681-6','J001');	 
+
+INSERT INTO book VALUES('AAA0009','The Lion, the Witch and the Wardrobe','Jerrold Wickes', 63.88, '954363904-3','T005'); 	 
+
+INSERT INTO book VALUES('AAA0010','The Hitchhiker's Guild to the Galaxy','Haze Crebott', 92.76, '997715233-0','T001');	 
+
+INSERT INTO book VALUES('AAA0011','Harry Potter and the Goblet of Fire','Justis Greener', 32.33, '904433520-0','H007');	 
+
+INSERT INTO book VALUES('AAA0012','The Catcher in the Rye','Harcourt Winser', 35.76, '378947208-5','T004');	 
+
+INSERT INTO book VALUES('AAA0013','Harry Potter and the Chamber of Secrets','Base Steedman', 8.32, '086008401-9','H006'); 
+
+INSERT INTO book VALUES('AAA0014','Gone with the Wind','Marcelo Mawford', 43.17, '835454388-9','G001'); 
+
+INSERT INTO book VALUES('AAA0015','The Litter Prince','Brittani Piddle', 87.49, '166014684-4','T008');	 
+
+INSERT INTO book VALUES('AAA0016','The Hound of the Baskervilles','Shannah Worters', 35.49, '776720164-3','T000');	 
+
+INSERT INTO book VALUES('AAA0017','Harry Potter and the Prisoner of Azkaban','Timmy Pendry', 15.76, '782896331-9','H000');	 
+
+INSERT INTO book VALUES('AAA0018','Animal Farm','Oberon Phin', 52.69, '266999174-2','A001');	 
+
+INSERT INTO book VALUES('AAA0019','The Great Gatsby','Madalyn Hammerberg', 56.05, '171601702-5','T007');	 
+
+INSERT INTO book VALUES('AAA0020','All Quiet on the Western Front','Tommy Giamo', 12.35, '594108977-5','A001');	 
+
+INSERT INTO book VALUES('AAA0021','Rebecca','Adrian Bisseker', 31.99, '069062105-1','R001');	 
+
+INSERT INTO book VALUES('AAA0022','The Secret Garden','Minerva Duval', 87.47, '779709045-9','T009');	 
+
+INSERT INTO book VALUES('AAA0023','The Old Man and the Sea','Herminia Cowie', 34.95, '637164874-8','T001'); 
+
+INSERT INTO book VALUES('AAA0024','Lord od the Flies','Burty Orniz', 59.64, '829129840-8','L001');	 
+
+INSERT INTO book VALUES('AAA0025','The Handmaid's Tale','Bess Davidai', 18.99, '407900038-3','T006');	 
+
+INSERT INTO book VALUES('AAA0026','Dracula','Charity Pitchers', 42.81, '423438604-9','D001'); 
+
+INSERT INTO book VALUES('AAA0027','Alice in Wonderland','Ilse Riseborough', 77.26, '121122293-4','A001'); 	 
+
+INSERT INTO book VALUES('AAA0028','The Picture of Dorian Gray','Roby Fishleigh', 39.8, '566031853-3','T009');	 
+
+INSERT INTO book VALUES('AAA0029','A Christmas Carol','Fernanda Allerton', 5.72, '088547575-5', 'A005');	 
+
+INSERT INTO book VALUES('AAA0030','The Pillars of the Earth','Tine Terran', 82.14, '741470297-9','T004');	 
+
+INSERT INTO book VALUES('AAA0031','Catch-22','Lexy Fishly', 1.87, '957655355-5','C001');	 
+
+INSERT INTO book VALUES('AAA0032','Atonement', 'Rosita Busfield', 13.57, '849662503-6','A001');	 
+
+INSERT INTO book VALUES('AAA0033','Charlie and the Chocolate Factory','Clarette Minghi', 66.32, '875659317-1','C002');	 
+
+INSERT INTO book VALUES('AAA0034','Anne of Green Gables','Wendeline McMichael', 73.16, '347680645-6','A009'); 
+
+INSERT INTO book VALUES('AAA0035','Great Expectations','Yuri Kindon', 76.01, '191754842-7','G001');	 
+
+INSERT INTO book VALUES('AAA0036','One Hundred Years of Solitude','Lisle Biaggioli', 86.83, '854642293-1','T009');	 
+
+INSERT INTO book VALUES('AAA0037','Oliver Twist', 'Linn Trowell', 87.74, '139023439-8','O001');	 
+
+INSERT INTO book VALUES('AAA0038','Persuasion','Quinn Woollam', 49.44, '309827718-1','P001');	 
+
+INSERT INTO book VALUES('AAA0039','The Count of Monte Cristo','Cory Hopfer', 30.94, '951413847-3','T009');	 
+
+INSERT INTO book VALUES('AAA0040','Matilda',	'Tori Danelet', 92.08, '790492273-8','M001'); 
+
+INSERT INTO book VALUES('AAA0041','Of Mice and Men','Lia Sealy', 56.07, '924490663-5','O009');	 
+
+INSERT INTO book VALUES('AAA0042','Witches Abroad','Laurie Blurton', 78.04, '806869058-1','W001');	 
+
+INSERT INTO book VALUES('AAA0043','Charlotte's Web','Albie Glassman', 84.62, '322885381-0','C001');	 
+
+INSERT INTO book VALUES('AAA0044','Little Women','Lauren Ternent', 29.83, '851612083-X','L001');	 
+
+INSERT INTO book VALUES('AAA0045','Emma','Jerri Ley', 60.77, '444425794-6','E001');	 
+
+INSERT INTO book VALUES('AAA0046','Memoirs of a Geiha','Jayme Littley', 71.71, '181284149-3','M001');	 
+
+INSERT INTO book VALUES('AAA0047','Winnie-the-Pooh','Lane Beevens', 23.28, '316338074-3','W001');	 
+
+INSERT INTO book VALUES('AAA0048','The Unbearable Lightness of Being','Darbie Peasgood', 8.65, '578867747-5','T009');	 
+
+INSERT INTO book VALUES('AAA0049','The Very Hungey Caterpillar','Jayne Vanyard', 28.66, '952652464-0','T001');	 
+
+INSERT INTO book VALUES('AAA0050','Lolita','Wally Bunford', 5.8, '087815439-6','L001');	 
+
+INSERT INTO book VALUES('AAA0051','One Flew Over the Cuckoo's Nest','Marjory Scrange', 22.44, '432234926-9','O001');	 
+
+INSERT INTO book VALUES('AAA0052','The Grapes of Wrath','Alfie Whellams', 88.0, '270429526-3','T006');	 
+
+INSERT INTO book VALUES('AAA0053','Anna Karenina','Cristal Hanbury', 70.93, '605092924-6','A001');	 
+
+INSERT INTO book VALUES('AAA0054','The Color Purple','Kirsteni Troppmann', 81.12, '955117010-5','T005');	 
+
+INSERT INTO book VALUES('AAA0055','Good Omens','Gretna De Giorgio', 31.37, '716019077-7','G001');	 
+
+INSERT INTO book VALUES('AAA0056','Bridget Jones's Diary','Alethea Stenning', 89.6, '702092183-3','B000');	 
+
+INSERT INTO book VALUES('AAA0057','The master and Margarita','Elton McMichan', 25.9, '832738712-X','T001');	 
+
+INSERT INTO book VALUES('AAA0058','Crime and Punishment','Felipe Labone', 59.0, '368825273-X','C001');	 
+
+INSERT INTO book VALUES('AAA0059','The Color of Magic','Erwin Hobell', 52.59, '651705183-X','T008');	 
+
+INSERT INTO book VALUES('AAA0060','A Tale of Two Cities','Blondelle Eccleston', 40.97, '063733594-5','E006'); 
+
+INSERT INTO book VALUES('AAA0061','James and the Giant Peach','Gage Barlass', 75.66, '637650354-3','J005');	 
+
+INSERT INTO book VALUES('AAA0062','Treasure Island','Christine Gritskov', 51.45, '676802674-7','T001');	 
+
+INSERT INTO book VALUES('AAA0063','His Dark Materials','Rochella Bloomfield', 40.68, '694778450-6','H007');	 
+
+INSERT INTO book VALUES('AAA0064','Brave New World','Cher McInility', 91.98, '912153978-2','B000'); 
+
+INSERT INTO book VALUES('AAA0065','The Wind in the Willows','Rodrique Linge', 42.83, '715635617-8','T009');	 
+
+INSERT INTO book VALUES('AAA0067','Heidi','Ludovika Raoul', 66.51, '513857213-X','H001');	 
+
+INSERT INTO book VALUES('AAA0068','Heart of Darkness','Norton Godber', 29.83, '805054869-4','H002');	 
+
+INSERT INTO book VALUES('AAA0069','The Thorn Birds','Editha Inkle', 38.43, '950749676-9','T001');	 
+
+INSERT INTO book VALUES('AAA0070','The Alchemist','Nickey Behnecken', 10.55, '724074012-9','T002'); 
+
+INSERT INTO book VALUES('AAA0071','Hogfather','Patrizius Oleshunin', 32.22, '803989250-3','H001'); 
+
+INSERT INTO book VALUES('AAA0072','Frankenstein','Doreen Huyche', 41.29, '688410138-5','F001');	 
+
+INSERT INTO book VALUES('AAA0073','The Name of the Rose','Leoline Grishelyov', 50.8, '330932311-0','T006');	 
+
+INSERT INTO book VALUES('AAA0074','Jonathan Livingston Seagull','Skell Kearton', 52.49, '555912953-4','J002');	 
+
+INSERT INTO book VALUES('AAA0075','Midnight's Children','Tamqrah Rawe', 87.39, '209847660-4','M001');	 
+
+INSERT INTO book VALUES('AAA0076','The Secret History','Heida Radbond', 5.61, '385813160-1','T003');	 
+
+INSERT INTO book VALUES('AAA0077','Dune','Gerri Coulman', 31.19, '172114394-7','D001');	 
+
+INSERT INTO book VALUES('AAA0078','The Story of a Murderer','Nellie Corson', 50.53, '101334897-4','T003');	 
+
+INSERT INTO book VALUES('AAA0079','The Stand','Chris Bush', 68.13, '573271090-6','T001');	 
+
+INSERT INTO book VALUES('AAA0080','The World According to Garp','Sonya McFadzean', 24.75, '548752522-6','T009');	 
+
+INSERT INTO book VALUES('AAA0081','Tess of the D'Urbervilles','Hester Blaske', 94.78, '393911441-3','T007');	 
+
+INSERT INTO book VALUES('AAA0082','Les Miserables','Stanton Cough', 72.58, '261989017-9','L001');	 
+
+INSERT INTO book VALUES('AAA0083','Three Men in a Boat','Mahmud Winch', 87.21, '173288013-1','T005');	 
+
+INSERT INTO book VALUES('AAA0084','A prayer for Owen Meany','Cate Privost', 31.01, '015885607-4','A005');	 
+
+INSERT INTO book VALUES('AAA0085','East of Eden','Ann-marie Dumpleton', 70.25, '518662968-5','E001');	 
+
+INSERT INTO book VALUES('AAA0086','The War of the Worlds','Libby Rattenbury', 68.18, '781835840-4','T000');	 
+
+INSERT INTO book VALUES('AAA0087','The Witches','Norby Cokayne', 93.59, '955596597-8','T001');	 
+
+INSERT INTO book VALUES('AAA0088','Small Gods','Sammy Larrie', 22.69, '398374876-7','S001');	 
+
+INSERT INTO book VALUES('AAA0089','The Poisonwood Bible','Dina Giocannoni', 66.58, '919526272-5','T000');	 
+
+INSERT INTO book VALUES('AAA0090','Brideshead Revisited','Alane Fochs', 35.6, '956317936-6','B001');	 
+
+INSERT INTO book VALUES('AAA0091','Wyrd Sister','Englebert Matitiaho', 96.96, '817576787-1','W001');	 
+
+INSERT INTO book VALUES('AAA0092','War and Peace','Retha Hiner', 81.36, '185856753-X','W002');	 
+
+INSERT INTO book VALUES('AAA0093','The Horse Whisperer','Cyndy Leyborne', 28.19, '639165952-4','T005');	 
+
+INSERT INTO book VALUES('AAA0094','The Fifth Elephant','Horacio Scholfield', 98.7, '816136382-X','T002');	 
+
+INSERT INTO book VALUES('AAA0095','The Truth','Sayre Hessel', 88.23, '231638236-3','T001');	 
+
+INSERT INTO book VALUES('AAA0096','The Day of the Jackal', 'Thedric Baptiste', 47.45, '415811929-4',	'T005'); 
+
+INSERT INTO book VALUES('AAA0097','Vanity Fair','Arleyne Walbridge', 50.86, '508088105-4','V001');	 
+
+INSERT INTO book VALUES('AAA0098','Cross Stitch','Neile Isted', 10.47, '357606235-1','C001');	 
+
+INSERT INTO book VALUES('AAA0099','Watership Down','Kellby Treece', 21.07, '410025438-5','W001');	 
+
+INSERT INTO book VALUES('AAA0100','Moby-Dick or, the Whale','Nonnah Tillett', 2.78, '339365317-2','M016');	 
+
+5.8 Categories (10 records) 
+
+BASE TABLE 
+
+INSERT INTO categories VALUES('L001', 'L');  
+
+INSERT INTO categories VALUES('T001', 'T');  
+
+INSERT INTO categories VALUES('I001', 'I');  
+
+INSERT INTO categories VALUES('U001', 'U');  
+
+INSERT INTO categories VALUES('D001', 'D');  
+
+INSERT INTO categories VALUES('O001', 'O');  
+
+INSERT INTO categories VALUES('T002', 'T');  
+
+INSERT INTO categories VALUES('T003', 'T');  
+
+INSERT INTO categories VALUES('P001', 'P');  
+
+INSERT INTO categories VALUES('A001', 'A');

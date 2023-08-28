@@ -1,0 +1,10 @@
+CREATE TABLE Student (
+Student_ID VARCHAR(10) NOT NULL,
+Student_name VARCHAR(50) NOT NULL,
+Student_contact VARCHAR(14) NOT NULL,
+Student_gender CHAR(1) DEFAULT 'M',
+Branch_ID VARCHAR(9) DEFAULT 'DCSY1S3',
+PRIMARY KEY(Student_ID),
+FOREIGN KEY (Branch_ID) references Branch (Branch_ID),
+CONSTRAINT chk_student_gender check(UPPER(Student_gender) in ('M','F'))
+);

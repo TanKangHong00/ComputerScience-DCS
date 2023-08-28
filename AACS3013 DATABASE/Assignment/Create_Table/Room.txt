@@ -1,0 +1,5 @@
+CREATE TABLE Room (
+Room_ID varchar(8) NOT NULL,
+Room_name varchar(20) NOT NULL,
+primary key(Room_ID)
+);

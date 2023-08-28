@@ -1,0 +1,29 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+PROMPT 'Data entry for Staff ID'
+PROMPT
+PROMPT
+
+ACCEPT v_Staff_ID  CHAR  FORMAT 'A4'   PROMPT ' Enter Staff ID(S001 ~ S010): '
+ 
+COLUMN Staff_ID          FORMAT A8  HEADING "STAFF ID";
+COLUMN Staff_name        FORMAT A20 HEADING "STAFF NAME";
+COLUMN Staff_contact     FORMAT A13 HEADING "STAFF CONTACT";
+COLUMN Room_booking_ID   FORMAT A10 HEADING "BOOKING ID";
+COLUMN Room_use_date     FORMAT A11 HEADING "USE DATE";
+
+TTITLE CENTER 'Staff ID for ' _DATE -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON Staff_ID ON Staff_name ON Staff_contact
+
+SELECT S.Staff_ID, Staff_name, Staff_contact, Room_booking_ID, Room_use_date
+FROM Staff S, Room_booking R
+WHERE R.Staff_ID = S.Staff_ID AND R.Staff_ID = '&v_Staff_ID'
+ORDER BY Room_booking_ID;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+TTITLE OFF

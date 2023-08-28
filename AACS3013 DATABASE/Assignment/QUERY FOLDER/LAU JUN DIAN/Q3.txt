@@ -1,0 +1,26 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+ACCEPT Branch_ID            char   FORMAT 'A8'         PROMPT 'Enter Branch ID        :      '
+
+COLUMN Student_ID              FORMAT A10        HEADING "Student ID ";
+COLUMN Student_name            FORMAT A15        HEADING "Student Name";   
+COLUMN Branch_ID               FORMAT A9         HEADING "Branch ID";
+COLUMN book_id                 FORMAT A7         HEADING "Book ID";
+COLUMN book_title              FORMAT A25        HEADING "Book Title";
+
+TTITLE CENTER 'Student &Branch_ID borrowing books list' _DATE -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_id on book_title on branch_id SKIP 1 ON Student_ID
+
+
+SELECT Branch_ID,B.book_id,book_title,S.Student_ID,Student_name
+FROM Student S,Book_loan_details BLD,Book B
+WHERE S.Student_ID=BLD.Student_ID AND Branch_ID='&Branch_ID' AND B.book_id=BLD.book_id
+ORDER BY book_id;
+
+CLEAR COLUMNS
+CLEAR BREAK
+TTITLE OFF

@@ -1,0 +1,33 @@
+--Query 2: Select Records by Fine amount
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'dd-mm-yyyy';
+cl scr;
+
+PROMPT +-------------------------------+
+PROMPT | Select records by fine amount |
+PROMPT |      E.g.: 0.10 - 0.20        |
+PROMPT +-------------------------------+
+ACCEPT v_start_fine_amt NUMBER FORMAT '99.99' PROMPT ' Enter the minimum fine amount: '
+ACCEPT v_end_fine_amt NUMBER FORMAT '99.99' PROMPT ' Enter the maximum fine amount: '
+
+COLUMN book_loan_id  FORMAT A12     HEADING "Book Loan ID";
+COLUMN student_id    FORMAT A10     HEADING "Student ID";
+COLUMN book_id       FORMAT A10     HEADING "Book ID";
+COLUMN borrowed_date FORMAT A11     HEADING "Borrow Date";
+COLUMN return_date   FORMAT A11     HEADING "Return Date";
+COLUMN fine          FORMAT 90.99   HEADING "Fine amount (RM)";
+
+TTITLE CENTER 'Book Loan Details List' -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON fine SKIP PAGE
+
+SELECT BD.book_loan_id, BD.student_id, BD.book_id, BD.borrowed_date, BD.return_date, BD.fine
+FROM Student S, Book_loan_details BD, Book_Loan BL, Book B
+WHERE BD.book_loan_id = BL.book_loan_id AND BD.student_id = S.student_ID AND BD.book_id = B.book_id AND BD.fine BETWEEN  '&v_start_fine_amt' AND '&v_end_fine_amt'
+ORDER BY BD.fine;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

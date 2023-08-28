@@ -1,0 +1,29 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+PROMPT 'Data entry for Book Borrowed Date'
+PROMPT
+PROMPT
+
+ACCEPT v_startDate CHAR FORMAT 'A11' PROMPT ' Enter Book Borrowed Date:  '
+
+COLUMN book_id               FORMAT A7       HEADING "Book ID";
+COLUMN student_id           FORMAT A11     HEADING "Student ID";
+COLUMN student_name     FORMAT A17     HEADING "Student Name";
+COLUMN book_title            FORMAT A27    HEADING "Book Title";
+COLUMN borrowed_date   FORMAT A14     HEADING "Borrowed Date";
+
+TTITLE CENTER 'Book Borrowed List for ' _DATE -
+RIGHT ' Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_id SKIP 1 ON student_id
+
+SELECT B.book_id, book_title, S.student_id, student_name,   borrowed_date 
+FROM student S, book B, book_loan_details BD 
+WHERE B.book_id = BD.book_id AND S.student_id = BD.student_id AND borrowed_date = '&v_startDate' 
+ORDER BY book_id;   
+
+CLEAR COLUMNS
+CLEAR BREAK
+TTITLE OFF

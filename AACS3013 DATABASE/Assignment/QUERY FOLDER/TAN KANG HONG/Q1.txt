@@ -1,0 +1,30 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MM-YYYY';
+
+
+cl scr
+PROMPT 'Data entry for Book Loan ID' 
+PROMPT 
+PROMPT 
+ACCEPT v_BOOK_LOAN_ID            char   FORMAT 'A14'         PROMPT 'Enter Book Loan ID       :      '
+
+COLUMN book_loan_id         FORMAT A14       HEADING 'Book Loan ID'
+COLUMN borrowed_date        FORMAT A14     HEADING 'Date Of Borrow'
+COLUMN returned_date        FORMAT A14      HEADING 'Date Of Return'
+COLUMN date_due_for_return        FORMAT A18      HEADING 'Date Due Of Return'
+COLUMN student_id           FORMAT 'A14'        HEADING 'Student ID'
+
+TTITLE CENTER 'BOOK LOAN FOR '_DATE-
+RIGHT'Page:'FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_loan_id SKIP 1 ON student_id 
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id  
+FROM book_loan B,student S  
+WHERE B.student_id = S.student_id AND book_loan_id = '&v_BOOK_LOAN_ID'
+ORDER BY book_loan_id; 
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

@@ -1,0 +1,33 @@
+--Query 3: Select Records by Student ID
+
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'dd-mm-yyyy';
+cl scr;
+
+PROMPT +------------------------------+
+PROMPT | Select records by Student ID |
+PROMPT |       E.g.: 20WMD02004       |
+PROMPT +------------------------------+
+ACCEPT v_select_student_id CHAR FORMAT 'A10' PROMPT ' Enter the student ID: '
+
+COLUMN student_id    FORMAT A10 HEADING "Student ID";
+COLUMN book_loan_id  FORMAT A12 HEADING "Book Loan ID";
+COLUMN book_id       FORMAT A10 HEADING "Book ID";
+COLUMN book_title    FORMAT A30 HEADING "Book Title";
+COLUMN borrowed_date FORMAT A11 HEADING "Borrow Date";
+COLUMN return_date   FORMAT A11 HEADING "Return Date";
+
+TTITLE CENTER 'Book Loan Details List' -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON student_id
+
+SELECT BD.student_id, BD.book_loan_id, BD.book_id, B.book_title, BD.borrowed_date, BD.return_date
+FROM Book_loan_details BD, Book_Loan BL, Book B, Student S
+WHERE BD.student_id = S.student_id AND BD.book_loan_id = BL.book_loan_id AND BD.book_id = B.book_id AND BD.student_id =  '&v_select_student_id' AND BD.borrowed_date = BL.borrowed_date
+ORDER BY BD.book_loan_id;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

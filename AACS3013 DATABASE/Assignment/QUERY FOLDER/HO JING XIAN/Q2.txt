@@ -1,0 +1,29 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+PROMPT 'Data entry for Categories'
+PROMPT
+PROMPT
+
+ACCEPT b_categories CHAR FORMAT 'A15' PROMPT ' Enter Categories :  '
+
+COLUMN book_id            FORMAT A7      HEADING "Book ID";
+COLUMN book_title         FORMAT A28    HEADING "Book Title";
+COLUMN student_id        FORMAT A10    HEADING "Student ID";
+COLUMN student_name  FORMAT A20    HEADING "Student Name";
+COLUMN categories         FORMAT A15    HEADING "Categories";
+
+TTITLE CENTER 'Book List for ' _DATE -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_id SKIP 1 ON student_id
+
+SELECT B.book_id, book_title, S.student_id, student_name, categories
+FROM student S, book B, book_loan_details BD  
+WHERE B.book_id = BD.book_id AND BD.student_id = S.student_id AND categories = '&b_categories'
+ORDER BY book_id, student_id; 
+
+CLEAR COLUMNS
+CLEAR BREAK
+TTITLE OFF

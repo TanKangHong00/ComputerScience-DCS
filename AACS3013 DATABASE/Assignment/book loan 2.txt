@@ -1,0 +1,33 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MM-YYYY';
+
+cl scr
+PROMPT 'Data entry for Borrowed Date' 
+PROMPT 
+PROMPT 
+ACCEPT v_START_BORROWED_DATE            char   FORMAT 'A14'         PROMPT 'Enter Start Borrowed Date       :      '
+ACCEPT v_END_BORROWED_DATE            char   FORMAT 'A14'         PROMPT 'Enter End Borrowed Date       :      '
+
+
+COLUMN book_loan_id         FORMAT A14       HEADING 'Book Loan ID'
+COLUMN borrowed_date        FORMAT A14     HEADING 'Date Of Borrow'
+COLUMN returned_date        FORMAT A14      HEADING 'Date Of Return'
+COLUMN date_due_for_return        FORMAT A18      HEADING 'Date Due Of Return'
+COLUMN student_id           FORMAT 'A14'        HEADING 'Student ID'
+
+
+TTITLE CENTER 'BOOK LOAN FOR '_DATE-
+RIGHT'Page:'FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_loan_id SKIP 1 ON student_id 
+
+SELECT B.book_loan_id,borrowed_date,returned_date,date_due_for_return,S.student_id 
+FROM book_loan B,student S 
+WHERE B.student_id = S.student_id AND borrowed_date BETWEEN  '&v_START_BORROWED_DATE'  AND '&v_END_BORROWED_DATE'  AND ROWNUM <= 10
+ORDER BY book_loan_id;
+
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

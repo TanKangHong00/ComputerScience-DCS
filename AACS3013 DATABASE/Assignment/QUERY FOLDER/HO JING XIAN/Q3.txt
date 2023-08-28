@@ -1,0 +1,30 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+PROMPT 'Data entry for Student ID'
+PROMPT
+PROMPT
+
+ACCEPT fstudent_ID CHAR FORMAT 'A11' PROMPT ' Enter First Student ID:  '
+ACCEPT lstudent_ID CHAR FORMAT 'A11' PROMPT ' Enter Last Student ID:  '
+
+COLUMN student_id           FORMAT A10     HEADING "Student ID";
+COLUMN student_name     FORMAT A20     HEADING "Student Name";
+COLUMN student_contact  FORMAT A15     HEADING "Student Contact";
+COLUMN book_id               FORMAT A7       HEADING "Book ID";
+COLUMN book_title            FORMAT A30     HEADING "Book Title";
+
+TTITLE CENTER 'Student Borrow Book List for ' _DATE -
+RIGHT ' Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_id SKIP 1 ON student_id
+
+SELECT S.student_id, student_name, student_contact, B.book_id, book_title
+FROM student S, book B, book_loan_details BD 
+WHERE B.book_id = BD.book_id AND BD.student_id = S.student_id AND S.student_id BETWEEN '&fstudent_ID' AND '&lstudent_ID' 
+ORDER BY book_id; 
+
+CLEAR COLUMNS
+CLEAR BREAK
+TTITLE OFF

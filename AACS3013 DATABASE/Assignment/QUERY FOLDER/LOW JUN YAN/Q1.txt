@@ -1,0 +1,29 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+PROMPT 'Data entry for Room ID'
+PROMPT
+PROMPT
+
+ACCEPT v_Room_ID  CHAR  FORMAT 'A7'   PROMPT ' Enter Room ID(ROOM000 ~ ROOM009): '
+
+COLUMN Room_ID           FORMAT A7  HEADING "ROOM ID";
+COLUMN Student_ID        FORMAT A10 HEADING "STUDENT ID";
+COLUMN room_use_date     FORMAT A12 HEADING "USE DATE";
+COLUMN student_name      FORMAT A20 HEADING "STUDENT NAME";
+COLUMN student_contact   FORMAT A15 HEADING "STUDENT CONTACT";
+
+TTITLE CENTER 'Room Use Details for ' _DATE -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON Room_ID SKIP 2 ON Student_ID
+
+SELECT Room_ID, S.Student_ID, room_use_date, student_name, student_contact
+FROM Room_booking R, Room_booking_details RD, Student S
+WHERE R.Room_booking_ID = RD.Room_booking_ID AND R.Student_ID = S.Student_ID AND RD.Room_ID = '&v_Room_ID'
+ORDER BY room_use_date;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+TTITLE OFF 

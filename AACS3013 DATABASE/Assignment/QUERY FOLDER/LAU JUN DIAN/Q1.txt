@@ -1,0 +1,27 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY';
+
+cl scr
+ACCEPT B_ID            char   FORMAT 'A8'         PROMPT 'Enter Branch ID        :      '
+
+COLUMN Student_ID              FORMAT A10        HEADING "Student ID ";
+COLUMN Student_name            FORMAT A15        HEADING "Student Name";
+COLUMN Student_contact         FORMAT A14        HEADING "Student contact";
+COLUMN Student_gender          FORMAT A6         HEADING "Gender";   
+COLUMN Branch_ID               FORMAT A9         HEADING "Branch ID";
+COLUMN Room_booking_ID         FORMAT A15        HEADING "Room booking ID";
+
+TTITLE CENTER 'Student &B_ID booking room list '_DATE -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON Branch_ID ON Room_ID ON Room_name SKIP 1 ON Student_ID
+
+
+SELECT S.Branch_ID,R.Room_ID,room_name,RB.Room_booking_ID,S.Student_ID,Student_name,Student_contact,Student_gender
+FROM Student S,Branch B,Room_booking RB,Room_booking_details RBD,Room R
+WHERE S.Branch_ID=B.Branch_ID AND RB.Student_ID=S.Student_ID AND RB.Room_booking_ID=RBD.Room_booking_ID AND R.Room_ID=RBD.Room_ID AND B.Branch_ID='&B_ID'
+ORDER BY Room_ID; 
+
+CLEAR COLUMNS
+CLEAR BREAKS
+TTITLE OFF

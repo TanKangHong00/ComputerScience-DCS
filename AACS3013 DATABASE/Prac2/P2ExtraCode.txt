@@ -1,0 +1,27 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MM-YYYY';
+
+COLUMN order_no FORMAT 9999999 HEADING "Order No"
+COLUMN menu_id FORMAT A7 HEADING "Menu ID"
+COLUMN descr FORMAT A30 HEADING "Menu Description"
+COLUMN quantity FORMAT 99 HEADING "Quantity"
+COLUMN price FORMAT $9,9999.99 HEADING "Price(RM)"
+COLUMN Total_Bill FORMAT $99,999.99 HEADING "Subtotal (RM)"
+
+TTITLE CENTER 'Order List for' _DATE-
+RIGHT'Page:'FORMAT 999 SQL.PNO SKIP 2
+
+BREAK ON order_no SKIP 2
+
+COMPUTE SUM LABEL 'Total:' OF subtotal ON order_no
+
+SELECT order_no,OL.menu_id,descr,quantity,OL.price,quantity*OL.price AS subtotal
+FROM order_list OL,menu M
+WHERE OL.menu_id = M.menu_id
+ORDER BY order_no;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

@@ -1,0 +1,31 @@
+--Query 1: Select Records by Book ID
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'dd-mm-yyyy';
+cl scr;
+
+PROMPT +---------------------------+
+PROMPT | Select records by Book ID |
+PROMPT |       E.g.: AAA0010       |
+PROMPT +---------------------------+
+ACCEPT v_select_book_id CHAR FORMAT 'A7' PROMPT ' Enter the Book ID: '
+
+COLUMN book_loan_id  FORMAT A12 HEADING "Book Loan ID";
+COLUMN book_id       FORMAT A7  HEADING "Book ID";
+COLUMN book_title    FORMAT A30 HEADING "Book Title";
+COLUMN borrowed_date FORMAT A11 HEADING "Borrow Date";
+COLUMN return_date   FORMAT A11 HEADING "Return Date";
+
+TTITLE CENTER 'Book Loan Details List' -
+RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 2
+BREAK ON book_id SKIP 2
+
+SELECT BD.book_loan_id, BD.book_id, B.book_title, BD.borrowed_date, BD.return_date
+FROM Book_loan_details BD, Book B, Book_Loan BL
+WHERE BD.book_loan_id = BL.book_loan_id AND BD.book_id = B.book_id AND BD.book_id =  '&v_select_book_id'
+ORDER BY BD.book_loan_id;
+
+CLEAR COLUMNS
+CLEAR BREAKS
+CLEAR COMPUTES
+TTITLE OFF

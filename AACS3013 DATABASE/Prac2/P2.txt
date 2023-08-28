@@ -1,0 +1,18 @@
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MM-YYYY';
+
+COLUMN order_no FORMAT 9999999 HEADING "Order No"
+COLUMN order_date FORMAT A10 HEADING "Order Date"
+COLUMN food_amount FORMAT $999.99 HEADING "Amount (RM)"
+COLUMN gst FORMAT $990.99 HEADING "GST (RM)"
+COLUMN service_charge FORMAT $999.99 HEADING "Service Charge (RM)"
+COLUMN Total_Bill FORMAT $9,999.99 HEADING "Total (RM)"
+
+
+SELECT order_no, order_date,
+       food_amount, gst, service_charge,
+       (food_amount+gst+service_charge) as Total_Bill
+FROM food_order;
+
+CLEAR COLUMNS

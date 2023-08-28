@@ -1,0 +1,10 @@
+INSERT INTO staff(Staff_ID,Staff_name,Staff_contact) VALUES('S001','Tan Hann Ren','012-3456789');  
+INSERT INTO staff VALUES('S002','Ng Zhe Xuan','012-3669854','M');  
+INSERT INTO staff(Staff_ID,Staff_name,Staff_contact) VALUES('S003','Sing Wen Xuan','012-7894563');  
+INSERT INTO staff VALUES('S004','Chua Wei Yun','012-7744589','F');  
+INSERT INTO staff(Staff_ID,Staff_name,Staff_contact) VALUES('S005','Lua Shi Qi','011-2589334');  
+INSERT INTO staff VALUES('S006','Lim Cheng Zhi','011-4523601','M');  
+INSERT INTO staff(Staff_ID,Staff_name,Staff_contact) VALUES('S007','Phong Ting Wei','011-1224578');  
+INSERT INTO staff VALUES('S008','Tan Rui Shein','014-7741258','M');  
+INSERT INTO staff(Staff_ID,Staff_name,Staff_contact) VALUES('S009','Tay Yi Sin','012-9966584');  
+INSERT INTO staff VALUES('S010','Tay Yi Chee','012-4452369','M'); 

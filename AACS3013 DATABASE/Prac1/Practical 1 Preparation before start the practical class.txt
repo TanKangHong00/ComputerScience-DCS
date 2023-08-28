@@ -1,0 +1,12 @@
+Preparation:
+1) Copy Practical 1 folder on your PC
+-CreateTable folder
+-InsertData folder
+-Practical1.doc
+
+2) Install Oracle SQL PLUS
+-Student_Installation_Guide.doc
+-LoginFirstTimeAfterInstallation.pdf
+
+3)Connect to Oracle SQL PLUS
+-connect to new account you created

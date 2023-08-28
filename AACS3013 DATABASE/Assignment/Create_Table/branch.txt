@@ -1,0 +1,5 @@
+CREATE TABLE Branch (
+Branch_ID VARCHAR(10) NOT NULL,
+Branch_name VARCHAR(50) NOT NULL,
+PRIMARY KEY(Branch_ID)
+);
