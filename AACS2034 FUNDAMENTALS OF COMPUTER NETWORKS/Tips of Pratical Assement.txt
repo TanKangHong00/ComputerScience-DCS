@@ -1,0 +1,15 @@
+Part A : Subnetting
+Part A: Subnetting 10%
+Part B: VLSM 10%
+Part C: Basic Configuration 20%
+
+refer 8.1,8.2 and 8.3 almost similiar
+
+router# show ip interface brief
+
+Week 13 
+SBA 
+Part A: Subnetting 20m
+Part B: VLSM 20M
+Part C: PT 60%
+100% converted to 40% weightage
