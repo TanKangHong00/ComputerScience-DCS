@@ -1,0 +1,11 @@
+Note to instructors:
+
+1. Tutor may need to teach IP addressing and Subnetting &VLSM in practical classes prior to lecture (please follow the plan B-course plan). 
+This is because Practical test is on week 13. 
+
+2. I will try my best to cover Chapter 8 topic in the lecture hall.  I will update the KL tutor about the progress of the lecture.  
+
+3. From the VLSM workbook, tutors are required to assign different VLSM problem questions 
+( minimum 15 questions for Class A, B and C) to students.
+ Students are required to submit their VLSM workbook exercise answers (handwritten answers) into Google Classroom.  
+

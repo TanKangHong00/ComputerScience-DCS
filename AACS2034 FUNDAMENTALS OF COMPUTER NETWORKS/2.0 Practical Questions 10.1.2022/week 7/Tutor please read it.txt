@@ -1,0 +1,14 @@
+Note to instructors:
+
+1. Tutor may need to teach IP addressing and Subnetting &VLSM in practical classes prior to lecture 
+(please follow the Course Plan to conduct practical class). 
+This is because E-Practical test (E-SBA) is on week 13. 
+
+2. I will try my best to cover Chapter 8 topic in the lecture hall.  
+I will update KL tutors about the progress of the lecture.  
+
+3. From the subnetting workbook, tutors are required to assign different subnetting problem questions
+ ( minimum 15 questions for Class A, B and C) to students.
+ Students are required to submit their subnetting workbook exercise answers
+ (handwritten answers) into Google Classroom.  
+
